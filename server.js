@@ -1,6 +1,7 @@
 import config from './config';
 import express from 'express';
 import apiRouter from './api';
+import path from 'path';
 
 const app = express();
 
@@ -15,6 +16,7 @@ app.get('/about', function (req, res) {
 });
 
 app.use('/api', apiRouter);
+app.use(express.static(path.join(__dirname, 'public')))
 
 app.listen(config.port, () => {
     console.log(`Express server is running on: ${config.port}`);
