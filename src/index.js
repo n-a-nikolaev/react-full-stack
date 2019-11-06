@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { App } from './components';
 
 ReactDOM.render(
-    React.createElement('h3', null, 'React is working fine'),
+    <App />,
     document.getElementById('root')
 );
